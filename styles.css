@@ -1,0 +1,505 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #F5F5F5;
+  color: #333333;
+  
+  margin: 0 auto; /* Center content */
+  padding: 0; /* Remove any extra padding */
+  }
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  width: 100%; /* Do not exceed viewport width */
+  max-width: 1200px; /* Cap the container size */
+  margin: 0 auto; /* Center horizontally */
+  padding: 0 20px; /* Optional padding inside the container */
+}
+
+
+
+
+h1, h2, p {
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: "Poppins", sans-serif;
+  color: #4CAF50;
+}
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+position: fixed;
+z-index: 10;
+  }
+  header {
+  background-color: black;
+  backdrop-filter: blur(5px); /* Adds blur effect */
+  color: #FFFFFF;
+  padding: 0 20px;
+}
+nav {
+  width: 50%;
+  max-width: 300px;
+  height: 50px;
+  }
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+nav > ul > li {
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+nav > ul > li:hover {
+  background-color: #FF5722; /* Vibrant orange */
+  color: white; /* Makes text stand out on hover */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tagline {
+  text-align: center;
+  
+  margin-bottom: 20px;
+  color: brown;
+}
+.choose {
+  text-align: center;
+  
+  margin-bottom: 20px;
+  color: brown;
+}
+.email {
+  margin: 25px auto;
+  width: 300px;
+  }
+
+  .main-doc {
+    position: relative;
+    padding: 0 150px 0 150px;
+    padding-top: 100px;
+  }
+  .logo {
+    width: max(8rem, 18vw);
+    aspect-ratio: 15 /4;
+    padding: 0.4rem;
+   background-color: white;
+  }
+  
+.features {
+  margin-top: 100px;
+}
+.home {
+  margin-top: 125px;
+  }
+.pricing {
+  margin-top: 125px;
+}
+.about-us {
+  margin-top: 125px;
+}
+footer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.feature-box {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the top */
+  gap: 20px;  /* Adds space between the boxes */
+  margin: 20px;  /* Optional margin for spacing around the entire container */
+}
+
+.feature-box {
+  width: 22%;  /* Adjust width to fit all boxes in a row */
+  padding: 20px;
+  background-color: #f1f1f1;  /* Light gray background for boxes */
+  border-radius: 20px;  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add slight shadow for better visibility */
+  text-align: center;
+}
+
+.feature-box h3 {
+  color: #333;  /* Dark text for headings */
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  color: #666;  /* Lighter text for descriptions */
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center; /* Center items vertically on small screens */
+  }
+
+  .feature-box {
+    width: 80%; /* Adjust width for mobile */
+    margin-bottom: 20px; /* Add space between stacked boxes */
+  }
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Creates 3 equal-width columns */
+  gap: 20px;  /* Adds space between the boxes */
+  margin: 20px;  /* Optional margin for spacing around the entire container */
+}
+
+.pricing-box {
+  padding: 20px;
+  background-color: #f1f1f1;  /* Light gray background for boxes */
+  border-radius: 20px;  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add slight shadow for better visibility */
+  text-align: center;
+}
+
+.pricing-box h3 {
+  color: #333;  /* Dark text for headings */
+  margin-bottom: 10px;
+}
+
+.pricing-box p {
+  color: #666;  /* Lighter text for descriptions */
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.select-btn {
+  background-color: #4CAF50;  /* Green background for the button */
+  color: white;  /* White text */
+  padding: 10px 20px;  /* Padding for the button */
+  border: none;  /* No border */
+  border-radius: 5px;  /* Rounded corners */
+  cursor: pointer;  /* Pointer cursor on hover */
+  font-size: 16px;  /* Larger text for readability */
+  margin-top: 20px;  /* Space between text and button */
+  transition: background-color 0.3s ease;  /* Smooth background color change on hover */
+}
+
+.select-btn:hover {
+  background-color: #45a049;  /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+  .pricing-container {
+    grid-template-columns: repeat(1, 1fr);  /* Stacks the boxes in 1 column on small screens */
+    align-items: center;  /* Ensures content is centered */
+  }
+  .select-btn {
+    width: 100%;  /* Makes the button take full width in stacked layout */
+    font-size: 18px;  /* Larger font size for easy tapping on mobile */
+  }
+}
+
+input[type="submit"] {
+  display: block;
+  width: 30%;
+ height: 1.5em;
+  font-size: 1.1rem;
+  background-color: #45a049;
+  border: none;
+  min-width: 200px;
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+  margin-left: 50px;
+  border-radius: 25px;
+}
+input[type="email"] {
+  display: block;
+  width: 40%;
+height: 1.5em;
+  font-size: 1.1rem;
+min-width: 300px;
+text-align: center;
+margin-top: 20px;
+}
+.social-icons {
+  display: flex; /* Use flexbox for precise spacing control */
+  justify-content: center; /* Center all icons horizontally */
+  align-items: center; /* Center icons vertically */
+  gap: 0.5rem; /* Adjust spacing between icons */
+  font-size: 2rem; /* Icon size */
+}
+
+.social-icons a {
+  text-decoration: none; /* Remove underline from links */
+  padding: 0; /* Remove padding from links */
+  margin: 0; /* Remove margin from links */
+  display: inline-block; /* Ensure icons align properly */
+  color: orangered;
+}
+
+.social-icons i {
+  margin: 0; /* Remove margin from icons */
+  padding: 0; /* Remove padding from icons */
+}
+
+
+h4 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.endline {
+  margin-bottom: 50px;
+}
+
+footer {
+  background-color: #333333; /* Dark background for the footer */
+  color: #FFFFFF; /* White text */
+  padding: 40px 20px; /* Space around the content */
+  display: flex; /* Use Flexbox for columns */
+  justify-content: space-between; /* Equal spacing between columns */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-column {
+  flex: 1; /* Each column takes equal width */
+  min-width: 200px; /* Ensure columns don't shrink too much */
+  margin: 10px; /* Add some spacing around each column */
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #FFC107; /* Gold color for headings */
+}
+
+.footer-column ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.footer-column ul li {
+  margin-bottom: 10px; /* Space between links */
+}
+
+.footer-column ul li a {
+  color: #FFFFFF; /* White text for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column ul li a:hover {
+  color: #FFC107; /* Gold hover effect */
+}
+
+.footer-column p {
+  margin: 10px 0; /* Add spacing between contact details */
+  color: #CCCCCC; /* Light gray for less emphasis */
+}
+
+.social-icons {
+  display: flex; /* Align icons horizontally */
+  gap: 15px; /* Space between icons */
+}
+
+.social-icons a {
+  text-decoration: none; /* Remove underline from icons */
+  color: #FFFFFF; /* White icons */
+  font-size: 1.5rem; /* Size of the icons */
+  transition: color 0.3s ease, transform 0.3s ease; /* Hover effects */
+}
+
+.social-icons a:hover {
+  color: #FFC107; /* Gold hover color */
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column; /* Stack the columns vertically */
+    align-items: center; /* Center content on smaller screens */
+  }
+  .footer-column {
+    text-align: center; /* Center-align text for each column */
+  }
+  .social-icons {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+.contact {
+  text-align: center;
+}
+.follow {
+  margin-top: 25px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;  /* Takes full width of the container */
+  max-width: 800px;  /* Optional: Set a max width for larger screens */
+  aspect-ratio: 16 / 9;  /* Ensures the video maintains a 16:9 ratio */
+  margin: 0 auto;  /* Centers the video horizontally */
+  }
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* Makes the iframe fill the container width */
+  height: 100%; /* Matches the height based on the aspect ratio */
+  border: 0;    /* Removes border around the video */
+}
+
+
+@media (max-width: 480px) {
+  .video-container {
+    max-width: 100%;  /* Removes fixed max-width for small screens */
+    padding: 0 10px;  /* Adds some horizontal padding for better spacing */
+  }
+}
+.video-container {
+  margin-top: 50px;
+}
+.features-container, .pricing-container {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
+
+.pricing-box {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.pricing-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.emaildiv {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.emaildiv:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+}
+.home {
+  scroll-margin-top: 80px; /* Adjust this value to match the height of your navbar */
+}
+.pricing {
+  scroll-margin-top: 80px; /* Adjust this value to match the height of your navbar */
+}
+.about-us {
+  scroll-margin-top: 80px; /* Adjust this value to match the height of your navbar */
+}
+.spacer {
+  height: 80px; /* Matches navbar height */
+  visibility: hidden;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212; /* Dark background color */
+    color: #E0E0E0; /* Light text color */
+  }
+
+  header {
+    background-color: #1E1E1E; /* Darker navbar background */
+    color: #FFFFFF; /* Navbar text color */
+  }
+
+  .feature-box,
+  .pricing-box {
+    background-color: #1E1E1E; /* Dark background for feature/pricing boxes */
+    color: #FFFFFF; /* Light text for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust shadow for dark mode */
+  }
+
+  footer {
+    background-color: #181818; /* Footer dark background */
+    color: #E0E0E0; /* Light footer text */
+  }
+
+  nav > ul > li:hover {
+    background-color: #FF5722; /* Orange hover effect for dark mode */
+    color: #FFFFFF;
+  }
+
+  .select-btn {
+    background-color: #444444; /* Button background */
+    color: #FFFFFF; /* Button text */
+  }
+
+  .select-btn:hover {
+    background-color: #555555; /* Darker button on hover */
+  }
+
+  input[type="email"],
+  input[type="submit"] {
+    background-color: #333333; /* Darker input background */
+    color: #E0E0E0; /* Input text color */
+    border: 1px solid #444444; /* Input border */
+  }
+
+  input[type="email"]:focus,
+  input[type="submit"]:focus {
+    outline: 2px solid #FF5722; /* Focus outline */
+  }
+
+  a {
+    color: #BB86FC; /* Bright purple links */
+  }
+
+  a:hover {
+    color: #FF5722; /* Orange on hover */
+  }
+}
